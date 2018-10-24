@@ -1,0 +1,4 @@
+Let's run this programm.
+git init
+git commit
+drop data base
