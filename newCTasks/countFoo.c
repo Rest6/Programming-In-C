@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 int a = atoi(argv[1]);
 int b = atoi(argv[2]);
 printf("The max number is: %i\n", max(a, b));
-printf("Products list: %d", fileReader());
+printf("Products list: %d\n", fileReader());
 
 return 0;
 }
