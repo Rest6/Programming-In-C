@@ -1,7 +1,7 @@
+#include "swp.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-#include "/home/qa/gitTutor/develop/cucumber-book/main/swap/swp.h"
 
 void swap(int* a, int* b);
 
