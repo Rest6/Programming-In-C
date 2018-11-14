@@ -1,4 +1,4 @@
 #!/bin/bash
 # Run C methods tests
 
-./test/**Test
+for each in /home/qa/gitTutor/develop/cucumber-book/test/**Test ; do $each ; done
