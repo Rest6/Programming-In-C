@@ -5,6 +5,8 @@
 
 int add(int,int);
 int subtract(int,int);
+typedef int (*fptrOperation)(int,int);
+int compute(fptrOperation, int, int);
 
 int main()
 {
@@ -30,5 +32,20 @@ subtract(c,d);
 printf("Then: I assert that the sum is: 18 \n\n");
 assert(subtract(c,d) == 18);
 
+printf("Scenario: 'compute()' with 'add()' functions testing\n\n");
+printf("Given: I use 'a' variable that is number 10\n");
+printf("And: I use 'b' variable that is number 11\n");
+printf("When: I pass 'a', 'b' and 'add()' method to the 'compute()' function\n");
+compute(add,a,b);
+printf("Then: I check that the number is 21\n");
+assert(compute(add,a,b) == 21);
+
+printf("Scenario: 'compute()' with 'subtract()' functions testing\n\n");
+printf("Given: I use 'a' variable that is number 10\n");
+printf("And: I use 'b' variable that is number 11\n");
+printf("When: I pass 'a', 'b' and 'subtract()' method to the 'compute()' function\n");
+compute(subtract,a,b);
+printf("Then: I check that the number is -1\n");
+assert(compute(subtract,a,b) == -1);
 return 0;
 }
