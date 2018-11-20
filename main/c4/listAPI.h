@@ -21,14 +21,14 @@ typedef struct _linkedList {
  Node *current;
 } LinkedList;
 
-int compareEmployee(Employee*, Employee*);
-void displayEmployee(Employee*);
-void initializeList(LinkedList*);
-void addHead(LinkedList*, void*);
-void addTail(LinkedList*, void*);
-Node *getNode(LinkedList*, COMPARE, void*);
-void delete(LinkedList*, Node*);
-void displayLinkedList(LinkedList*, DISPLAY);
+//int compareEmployee(Employee*, Employee*);
+//void displayEmployee(Employee*);
+//void initializeList(LinkedList*);
+//void addHead(LinkedList*, void*);
+//void addTail(LinkedList*, void*);
+//Node *getNode(LinkedList*, COMPARE, void*);
+//void delete(LinkedList*, Node*);
+//void displayLinkedList(LinkedList*, DISPLAY);
 
 int compareEmployee(Employee *e1, Employee *e2) {
  return strcmp(e1->name, e2->name);
