@@ -24,26 +24,14 @@ int main()
 
 char* last(char* lastName)
 {
-	char test[10] = "";
-	int i = 0;
+	char* test = lastName; 
 
-	printf("Brfote all %s \n",test);
+	printf("Brfote all %s \n", test);
+	while(*test++ != '\0')
 	
-	for(i = 0; i < strlen(lastName); i++)
-	{
-		if(lastName[i] == ' ')
-		{
-			while(scanf("%c",lastName) != '!')
-			{
-				test[i] = lastName[i];
-			
-			}
-		}
-	}
-
 	printf("func result: %s\n",test);	
-	lastName = test;
-	return lastName;
+
+	return ++test;
 }
 
 char* upper(char str[])
