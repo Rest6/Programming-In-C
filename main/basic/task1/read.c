@@ -27,11 +27,11 @@ char* last(char* lastName)
 	char* test = lastName; 
 
 	printf("Brfote all %s \n", test);
-	while(*test++ != '\0')
+	while(*test++ != ' ')
 	
-	printf("func result: %s\n",test);	
+	printf("After a While: %s\n",test);	
 
-	return ++test;
+	return test;
 }
 
 char* upper(char str[])
