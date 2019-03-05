@@ -1,0 +1,46 @@
+char word[LENGTH+1];
+
+    // spell-check each word in text
+    for (int c = fgetc(fp); c != EOF; c = fgetc(fp))
+    {
+        // allow only alphabetical characters and apostrophes
+        if (isalpha(c) || (c == '\'' && index > 0))
+        {
+            // append character to word
+            word[index] = c;
+            index++;
+
+            // ignore alphabetical strings too long to be words
+            if (index > LENGTH)
+            {
+                // consume remainder of alphabetical string
+                while ((c = fgetc(fp)) != EOF && isalpha(c));
+
+                // prepare for new word
+                index = 0;
+            }
+        }
+
+        // ignore words with numbers (like MS Word can)
+        else if (isdigit(c))
+        {
+            // consume remainder of alphanumeric string
+            while ((c = fgetc(fp)) != EOF && isalnum(c));
+
+            // prepare for new word
+            index = 0;
+        }
+
+        // we must have found a whole word
+        else if (index > 0)
+        {
+            // terminate current word
+            word[index] = '\0';
+
+            // update counter
+            words++;
+
+            // prepare for next word
+            index = 0;
+        }
+    }

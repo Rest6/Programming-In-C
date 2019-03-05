@@ -93,21 +93,21 @@ void insertNode(TreeNode **root, COMPARE compare, void* data) {
  return;
  }
  while (1) {
- if (compare((*root)->data, data) > 0) {
- if ((*root)->left != NULL) {
- *root = (*root)->left;
- } else {
- (*root)->left = node;
- break;
- }
- } else {
- if ((*root)->right != NULL) {
- *root = (*root)->right;
- } else {
- (*root)->right = node;
- break;
- }
- }
+  if (compare((*root)->data, data) > 0) {
+ 	if ((*root)->left != NULL) {
+ 		*root = (*root)->left;
+ 	} else {
+ 		(*root)->left = node;
+ 		break;
+ 	}
+  } else {
+ 	if ((*root)->right != NULL) {
+ 	*root = (*root)->right;
+  } else {
+ 	(*root)->right = node;
+ 	break;
+ 	 }
+  }
  }
 }
 
